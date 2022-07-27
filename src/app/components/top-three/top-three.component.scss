@@ -1,5 +1,17 @@
+.topThree {
+  width: 300px;
+  padding: 10px;
+  background-color: rgb(119, 206, 206);
+}
+
 .container {
-    width: 300px;
-    padding: 10px;
-    background-color: rgb(119, 206, 206);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 50vw;
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  position: relative;
 }

@@ -1,0 +1,19 @@
+<mat-card class="container  mat-elevation-z5">
+  <h4>Browse listings of our top Bikes</h4>
+  <div class="browser">
+    <button (click)="changeIndex('DEC')" mat-icon-button>
+      <mat-icon>keyboard_arrow_left</mat-icon>
+    </button>
+    <div class="details">
+      <img [src]="bikes[index].img" alt="bike" />
+      <div class="blurb">
+        {{ bikes[index].make + " " + bikes[index].model }} <br /><br>
+        price: {{ bikes[index].price }}EUR <br />
+        listed since {{ bikes[index].date }} <br />
+      </div>
+    </div>
+    <button (click)="changeIndex('INC')" mat-icon-button>
+      <mat-icon>keyboard_arrow_right</mat-icon>
+    </button>
+  </div>
+</mat-card>

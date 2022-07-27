@@ -1,12 +1,17 @@
-<mat-card class="container mat-elevation-z5">
-  <mat-card-title>Our top three Bikes</mat-card-title>
-  <mat-list role="list">
-    <ng-container *ngFor="let bike of topThree">
-      <mat-list-item role="listitem">
-        <span style="font-weight: bold">{{ bike[0].make }}</span
-        >{{ "-" + bike[0].model }}</mat-list-item
-      >
-      <mat-divider></mat-divider>
-    </ng-container>
-  </mat-list>
+<mat-card style="background-image: url(assets/images/bike.png)" class="container">
+  <mat-card class="topThree mat-elevation-z5">
+    <mat-card-title>Our top three Bikes</mat-card-title>
+    <mat-list role="list">
+      <ng-container *ngFor="let bike of topThree">
+        <mat-list-item role="listitem">
+          <span style="font-weight: bold">{{ bike[0].make }}</span
+          >{{ "-" + bike[0].model }}</mat-list-item
+        >
+        <mat-divider></mat-divider>
+      </ng-container>
+    </mat-list>
+  </mat-card>
+  <app-browse [bikes]="fullList"></app-browse>
 </mat-card>
+
+

@@ -1,0 +1,36 @@
+.container {
+  background-color: #f44336;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+}
+
+img {
+  max-width: 200px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blurb {
+  background-color: rgba(159, 159, 159, 0.1);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: smaller;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.browser {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}

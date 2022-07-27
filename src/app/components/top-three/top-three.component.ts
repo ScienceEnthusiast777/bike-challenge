@@ -13,6 +13,7 @@ type LooseOb = {
 })
 export class TopThreeComponent implements OnInit {
   public topThree: any[] = [];
+  public fullList: any[] = [];
 
   constructor(
     private bikeService: BikesService,
@@ -22,6 +23,11 @@ export class TopThreeComponent implements OnInit {
   ngOnInit(): void {
     const cards = this.csvService.convert(this.bikeService.getBikes());
     this.topThree = this.getTopThree(cards);
+    for (let bike of this.topThree) {
+      for (let listing of bike) {
+        this.fullList.push(listing);
+      }
+    }
   }
 
   public getTopThree(bikes: any) {
