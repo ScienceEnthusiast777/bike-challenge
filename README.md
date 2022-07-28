@@ -1,27 +1,23 @@
-# BikeEEE
+# BikEEE
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
+### to run: 
 
-## Development server
+from the projects root directory:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+```
+npm install 
+npm run start
+```
 
-## Code scaffolding
+### to run tests: 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
+ng test --browsers ChromeHeadless
+```
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Further Improvements:
+- Ideally, once the database items have been parsed and counted taking in to account possible variations in format (capital letters/ special characters etc), the top three Model names would be checked against a record to ensure the correct standard is used.
+- The CSV conversion service I have made works for the specific data supplied for the challenge, but in reality it would be better to either use a dedicated npm package to handle this, or write a more in-depth service to deal with possible formatting variations (because CSV is not a standardised format).
+- The styling of the components is a little awkward (for example the layout does not scale nicely when the browser size changes), I would add breakpoints for example to change the layout when the browser size changes. I would also like to set a more accurate color pallette.
+- At the moment the browser component draws from all the listings for each of the top three models. In reality, where there would many more listings, it would be better to have another service to provide a smaller sample. Maybe it would be better if this would be a backend process which would send the top three bikes as a response and a small selection of listings for each- to avoid having to process all of the listings in the front end. 
+- I would also add more tests for the CSV service to check data is correctly processed when model names have different formats. 
